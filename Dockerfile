@@ -2,7 +2,7 @@ FROM python:3.9.9-slim-bullseye
 
 COPY requirements.txt requirements.txt
 RUN apt update -y && \
-    apt install ipmitool && \
+    apt install -y ipmitool && \
     pip3 install -r ./requirements.txt
 
 COPY . .
